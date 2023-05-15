@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{61851317-C11F-46CC-A85F-B55AD8A2C3A5}|https">
+  <MonoDevelop.Ide.ItemProperties.todo-aspnetmvc-ui PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="todo-aspnetmvc-ui/Program.cs">
+    <Files>
+      <File FileName="todo-aspnetmvc-ui/Controllers/TodoController.cs" Line="14" Column="6" />
+      <File FileName="todo-aspnetmvc-ui/Program.cs" Line="18" Column="52" />
+      <File FileName="todo-aspnetmvc-ui/Views/Todo/Index.cshtml" />
+      <File FileName="todo-aspnetmvc-ui/Views/_ViewImports.cshtml" />
+      <File FileName="todo-aspnetmvc-ui/Data/TodoContext.cs" Line="18" Column="55" />
+      <File FileName="todo-aspnetmvc-ui/Views/Todo/Create.cshtml" />
+      <File FileName="todo-aspnetmvc-ui/Controllers/HomeController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ToDoApplication" expanded="True">
+            <Node name="todo-aspnetmvc-ui" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Todo" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

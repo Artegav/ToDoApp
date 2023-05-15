@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/todo-aspnetmvc-ui.csproj": {}
+  },
+  "projects": {
+    "/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/todo-aspnetmvc-ui.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/todo-aspnetmvc-ui.csproj",
+        "projectName": "todo-aspnetmvc-ui",
+        "projectPath": "/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/todo-aspnetmvc-ui.csproj",
+        "packagesPath": "/Users/artemiygavrilov/.nuget/packages/",
+        "outputPath": "/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/artemiygavrilov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/todo-domain-entities.csproj": {
+                "projectPath": "/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/todo-domain-entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/todo-domain-entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/todo-domain-entities.csproj",
+        "projectName": "todo-domain-entities",
+        "projectPath": "/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/todo-domain-entities.csproj",
+        "packagesPath": "/Users/artemiygavrilov/.nuget/packages/",
+        "outputPath": "/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/artemiygavrilov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

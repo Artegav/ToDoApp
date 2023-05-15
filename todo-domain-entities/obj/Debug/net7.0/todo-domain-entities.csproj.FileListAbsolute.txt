@@ -1,0 +1,12 @@
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/bin/Debug/net7.0/todo-domain-entities.deps.json
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/bin/Debug/net7.0/todo-domain-entities.dll
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/bin/Debug/net7.0/todo-domain-entities.pdb
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/Debug/net7.0/todo-domain-entities.csproj.AssemblyReference.cache
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/Debug/net7.0/todo-domain-entities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/Debug/net7.0/todo-domain-entities.AssemblyInfoInputs.cache
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/Debug/net7.0/todo-domain-entities.AssemblyInfo.cs
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/Debug/net7.0/todo-domain-entities.csproj.CoreCompileInputs.cache
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/Debug/net7.0/todo-domain-entities.dll
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/Debug/net7.0/refint/todo-domain-entities.dll
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/Debug/net7.0/todo-domain-entities.pdb
+/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/obj/Debug/net7.0/ref/todo-domain-entities.dll

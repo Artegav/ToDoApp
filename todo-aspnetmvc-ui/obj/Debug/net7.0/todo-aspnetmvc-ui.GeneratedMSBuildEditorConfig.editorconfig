@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = todo_aspnetmvc_ui
+build_property.RootNamespace = todo_aspnetmvc_ui
+build_property.ProjectDir = /Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Item/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Item/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Item/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Item/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Item/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Todo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kby9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Todo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kby9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Todo/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kby9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Todo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kby9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Todo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kby9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-h7us8ej2yv
