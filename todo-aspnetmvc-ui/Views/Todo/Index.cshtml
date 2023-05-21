@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>To do lists</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -28,7 +28,9 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                <a asp-controller="Item" asp-action="Index">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)

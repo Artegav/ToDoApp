@@ -21,7 +21,7 @@ public class TodoItem
 
     public int ToDoListId { get; set; }
 
-    public TodoList TodoList { get; set; } = null!;
+    public TodoList? TodoList { get; set; }
 }
 
 public enum State

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using todo_domain_entities;
 
-namespace todo_aspnetmvc_ui.Data
+
+namespace todo_domain_entities.Data
 {
     public class TodoContext : DbContext
     {
@@ -15,8 +15,8 @@ namespace todo_aspnetmvc_ui.Data
             Database.EnsureCreated();
         }
 
-        public DbSet<TodoList> TodoList { get; set; } = null!;
-        public DbSet<TodoItem> TodoItems { get; set; } = null!;
+        public DbSet<TodoList> TodoList { get; set; }
+        public DbSet<TodoItem> TodoItems { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

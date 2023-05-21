@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iGX19djjh4ydcnEJshNvnTFdbdOcsI9z1AfMaeWMgd+BJemeLXr/Ay+T6kiYJIJ/DblvRvkUco8pKgokFXTMcA==",
+  "dgSpecHash": "wFap1lsbCObX02n8/ynC1htIGaISvS1GUIKQsl5wC7cRPHEsfyyo0Hb4Q0ZhOcUxywadMFzab6L0sErTx9Xxcw==",
   "success": true,
   "projectFilePath": "/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/todo-aspnetmvc-ui.csproj",
   "expectedPackageFiles": [

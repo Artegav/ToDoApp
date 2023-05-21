@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using todo_aspnetmvc_ui.Data;
 using todo_domain_entities;
+using todo_domain_entities.Data;
 
 namespace todo_aspnetmvc_ui.Controllers
 {
@@ -56,11 +56,9 @@ namespace todo_aspnetmvc_ui.Controllers
         }
 
         // POST: Item/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost("/Item/Create")]
         [ValidateAntiForgeryToken]
-        public ActionResult<TodoItem> Create(TodoItem todoItem)
+        public async Task<ActionResult<TodoItem>> Create(TodoItem todoItem)
         {
             if (!ModelState.IsValid)
             {
@@ -68,8 +66,8 @@ namespace todo_aspnetmvc_ui.Controllers
                 return View(todoItem);
             }
 
-            _context.Add(todoItem);
-            _context.SaveChanges();
+            _context.TodoItems.Add(todoItem);
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 

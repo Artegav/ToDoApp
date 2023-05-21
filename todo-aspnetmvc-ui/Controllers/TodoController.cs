@@ -5,18 +5,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using todo_aspnetmvc_ui.Data;
 using todo_domain_entities;
+using todo_domain_entities.Data;
+using todo_domain_entities.Services;
 
 namespace todo_aspnetmvc_ui.Controllers
 {
     public class TodoController : Controller
     {
         private readonly TodoContext _context;
+        private IListService _listService;
 
-        public TodoController(TodoContext context)
+        public TodoController(TodoContext context, IListService listService)
         {
             _context = context;
+            _listService = listService;
         }
 
         // GET: Todo
@@ -24,8 +27,9 @@ namespace todo_aspnetmvc_ui.Controllers
         public async Task<IActionResult> Index()
         {
               return _context.TodoList != null ? 
-                          View(await _context.TodoList.ToListAsync()) :
+                          View(await _listService.GetLists()) :
                           Problem("Entity set 'TodoContext.TodoList'  is null.");
+
         }
 
         // GET: Todo/Details/5
@@ -49,7 +53,7 @@ namespace todo_aspnetmvc_ui.Controllers
 
         [Route("/Todo/Create")]
         // GET: Todo/Create
-        public IActionResult Create()
+        public ActionResult Create()
         {
             return View();
         }
@@ -64,9 +68,8 @@ namespace todo_aspnetmvc_ui.Controllers
         {
             if (!ModelState.IsValid) 
                 return View(todoList);
-            
-            _context.Add(todoList);
-            await _context.SaveChangesAsync();
+
+            await _listService.AddList(todoList);
             return RedirectToAction(nameof(Index));
         }
 

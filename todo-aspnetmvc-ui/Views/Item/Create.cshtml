@@ -24,12 +24,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
+                <select asp-for="Status" class="form-control">
+                    <option value="@State.NotStarted">Not Started</option>
+                    <option value="@State.InProgress">In Progress</option>
+                    <option value="@State.Completed">Completed</option>
+                </select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="IsHidden" class="control-label"></label>
-                <input asp-for="IsHidden" class="form-control" />
+                <input asp-for="IsHidden" class="form-check-input"/>
                 <span asp-validation-for="IsHidden" class="text-danger"></span>
             </div>
             <div class="form-group">

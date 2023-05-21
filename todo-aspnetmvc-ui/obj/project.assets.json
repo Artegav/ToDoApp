@@ -3925,6 +3925,9 @@
       "todo-domain-entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
         "compile": {
           "bin/placeholder/todo-domain-entities.dll": {}
         },

@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "Z881Sll1XkcynPZcV0DmGTP3k8Besr2aAO5dfN8SmuoF0CgXuI+98KecD1oiBCjaNC+gqPrvKSfw0nVzjeD2qQ==",
+  "dgSpecHash": "Skr+whIbma4S1UdERY2sA5kvEZ8hcmc1T2iEX5IQhzTkxpKit4zjwzaf/zbvnCnye+eovTZh9EmUiC6UQ5go4A==",
   "success": true,
   "projectFilePath": "/Users/artemiygavrilov/Projects/todo-application/todo-domain-entities/todo-domain-entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.entityframeworkcore/7.0.5/microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.5/microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.5/microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

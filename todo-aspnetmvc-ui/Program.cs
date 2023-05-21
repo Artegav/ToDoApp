@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using todo_aspnetmvc_ui.Data;
+using todo_domain_entities.Data;
+using todo_domain_entities.Services;
+
 namespace todo_aspnetmvc_ui;
 
 internal static class Program
@@ -16,6 +18,8 @@ internal static class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+        builder.Services.AddScoped<IListService, ListService>();
+        builder.Services.AddScoped<IItemService, ItemService>();
 
         var app = builder.Build();
 
