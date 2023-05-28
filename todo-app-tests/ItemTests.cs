@@ -5,7 +5,7 @@ using todo_aspnetmvc_ui.Controllers;
 namespace todo_app_tests;
 
 [TestFixture]
-public class ItemControllerTests
+public class ItemTests
 {
     private Mock<IItemService> _mockItemService;
     private Mock<IListService> _mockListService;
