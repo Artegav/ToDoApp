@@ -18,8 +18,8 @@ internal static class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
-        builder.Services.AddScoped<IListService, ListService>();
-        builder.Services.AddScoped<IItemService, ItemService>();
+        builder.Services.AddTransient<IListService, ListService>();
+        builder.Services.AddTransient<IItemService, ItemService>();
 
         var app = builder.Build();
 
@@ -37,16 +37,15 @@ internal static class Program
         app.UseRouting();
 
         app.UseAuthorization();
-
-        //app.MapControllers();
+        
         app.MapControllerRoute(
             name: "listRoute",
-            pattern: "Todo/{id}/{action=Index}",
-            defaults: new { controller = "Todo", action = "Index" });
-        app.MapControllerRoute(
-            name: "itemRoute",
-            pattern: "Item/{id}/{action=Index}",
-            defaults: new { controller = "Item", action = "Index" });
+            pattern: "{controller=Todo}/{action=Index}/{id?}");
+        
+        // app.MapControllerRoute(
+        //     name: "showLists",
+        //     pattern: "{controller=Todo}/{action=Show}/{id?}");
+        
 
         app.Run();
     }

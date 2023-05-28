@@ -6,39 +6,41 @@
 
 <h1>Tasks to do</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<div class="btn-group" role="group">
+    <a asp-action="Create" class="btn btn-success btn-sm">Create new task</a>
+</div>
+<div class="btn-group" role="group">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="hideCompleted" onchange="hideCompletedItems(this.checked)">
+        <label class="form-check-label" for="hideCompleted">
+            Hide Completed Items
+        </label>
+    </div>
+</div>
+<table class="table table-hover" aria-describedby="list of items">
     <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsHidden)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreationDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DueDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TodoList)
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            Creation Date
+        </th>
+        <th>
+            Due Date
+        </th>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
+    @foreach (var item in Model) {
+        <tr class="@(item.IsCompleted ? "completed" : "")">
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
@@ -49,23 +51,18 @@
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsHidden)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.CreationDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DueDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TodoList.Title)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
-}
+    }
     </tbody>
 </table>
+

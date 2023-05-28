@@ -42,6 +42,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "BootstrapBlazor": {
+              "target": "Package",
+              "version": "[7.6.6, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -127,6 +131,10 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.5, )"
             }

@@ -1,4 +1,10 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/DotNetCliExePath/@EntryValue">/usr/local/share/dotnet/dotnet</s:String>
 	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1114112</s:Int64>
-	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">/usr/local/share/dotnet/sdk/7.0.203/MSBuild.dll</s:String></wpf:ResourceDictionary>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">/usr/local/share/dotnet/sdk/7.0.203/MSBuild.dll</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4628b5c1_002Dabc8_002D41f6_002Da17e_002D0c46067762d2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;Namespace&gt;todo_app_tests&lt;/Namespace&gt;
+    &lt;Project Location="/Users/artemiygavrilov/Projects/todo-application/todo-app-tests" Presentation="&amp;lt;todo-app-tests&amp;gt;" /&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

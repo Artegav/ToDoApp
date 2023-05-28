@@ -4,10 +4,10 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create new Task</h1>
 
-<h4>TodoItem</h4>
 <hr />
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -32,11 +32,6 @@
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IsHidden" class="control-label"></label>
-                <input asp-for="IsHidden" class="form-check-input"/>
-                <span asp-validation-for="IsHidden" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="CreationDate" class="control-label"></label>
                 <input asp-for="CreationDate" class="form-control" />
                 <span asp-validation-for="CreationDate" class="text-danger"></span>
@@ -51,14 +46,15 @@
                 <select asp-for="ToDoListId" class ="form-control" asp-items="ViewBag.ToDoListId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <div class="btn-group" role="group">
+                    <input type="submit" value="Create" class="btn btn-primary"/>
+                </div>
+                <div class="btn-group" role="group">
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </div>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

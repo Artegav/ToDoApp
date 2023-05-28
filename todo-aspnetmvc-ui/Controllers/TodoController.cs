@@ -1,70 +1,53 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using todo_domain_entities;
-using todo_domain_entities.Data;
 using todo_domain_entities.Services;
 
 namespace todo_aspnetmvc_ui.Controllers
 {
     public class TodoController : Controller
     {
-        private readonly TodoContext _context;
-        private IListService _listService;
+        private readonly IListService _listService;
+        private readonly IItemService _itemService;
 
-        public TodoController(TodoContext context, IListService listService)
+        public TodoController(IListService listService, IItemService itemService)
         {
-            _context = context;
             _listService = listService;
+            _itemService = itemService;
         }
 
-        // GET: Todo
-        [Route("/")]
+        // GET:
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
-              return _context.TodoList != null ? 
-                          View(await _listService.GetLists()) :
-                          Problem("Entity set 'TodoContext.TodoList'  is null.");
-
+            var lists = await _listService.GetLists();
+            foreach (var list in lists)
+            {
+                list.Items = await _itemService.GetItemsByListId(list.Id);
+            }
+            
+            return View(lists);
         }
 
         // GET: Todo/Details/5
-        [Route("/Todo/Details/{id:int}")]
+        [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.TodoList == null)
-            {
+            if (id == null)
                 return NotFound();
-            }
-
-            var todoList = await _context.TodoList
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (todoList == null)
-            {
-                return NotFound();
-            }
+            
+            var todoList = await _listService.GetListById(id.Value);
 
             return View(todoList);
         }
 
-        [Route("/Todo/Create")]
         // GET: Todo/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+        [HttpGet]
+        public IActionResult Create() => View();
 
         // POST: Todo/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [Route("/Todo/Create")]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult<TodoList>> Create(TodoList todoList)
+        public async Task<IActionResult> Create(TodoList todoList)
         {
             if (!ModelState.IsValid) 
                 return View(todoList);
@@ -74,96 +57,88 @@ namespace todo_aspnetmvc_ui.Controllers
         }
 
         // GET: Todo/Edit/5
+        [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.TodoList == null)
-            {
+            if (id == null)
                 return NotFound();
-            }
 
-            var todoList = await _context.TodoList.FindAsync(id);
-            if (todoList == null)
-            {
-                return NotFound();
-            }
+            var todoList = await _listService.GetListById(id.Value);
+
             return View(todoList);
         }
 
         // POST: Todo/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,IsHidden")] TodoList todoList)
+        public async Task<IActionResult> Edit(int id, TodoList todoList)
         {
             if (id != todoList.Id)
-            {
                 return NotFound();
-            }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return View(todoList);
+            
+            try
             {
-                try
-                {
-                    _context.Update(todoList);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TodoListExists(todoList.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                await _listService.UpdateList(todoList);
             }
-            return View(todoList);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!_listService.TodoListExists(todoList.Id))
+                {
+                    return NotFound();
+                }
+                
+                throw;
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Todo/Delete/5
+        [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.TodoList == null)
-            {
+            if (id == null)
                 return NotFound();
-            }
 
-            var todoList = await _context.TodoList
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (todoList == null)
-            {
-                return NotFound();
-            }
+            var todoList = await _listService.GetListById(id.Value);
 
             return View(todoList);
         }
 
         // POST: Todo/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            if (_context.TodoList == null)
-            {
-                return Problem("Entity set 'TodoContext.TodoList'  is null.");
-            }
-            var todoList = await _context.TodoList.FindAsync(id);
-            if (todoList != null)
-            {
-                _context.TodoList.Remove(todoList);
-            }
-            
-            await _context.SaveChangesAsync();
+            await _listService.DeleteList(id);
             return RedirectToAction(nameof(Index));
         }
-
-        private bool TodoListExists(int id)
+        
+        [HttpGet]
+        public async Task<IActionResult> Copy(int id)
         {
-          return (_context.TodoList?.Any(e => e.Id == id)).GetValueOrDefault();
+            await _listService.CopyList(id);
+            return RedirectToAction(nameof(Index));
+        }
+        
+        [HttpGet]
+        public async Task<IActionResult> Hide(int id)
+        {
+            var todoList = await _listService.GetListById(id);
+            todoList.IsHidden = true;
+            await _listService.UpdateList(todoList);
+
+            return RedirectToAction(nameof(Index));
+        }
+        
+        [HttpGet]
+        public async Task<IActionResult> Show()
+        {
+            var lists = await _listService.GetLists();
+            var hiddenLists = lists.Where(x => x.IsHidden = false);
+            await _listService.UpdateRangeOfLists(hiddenLists);
+            
+            return RedirectToAction(nameof(Index));
         }
     }
 }

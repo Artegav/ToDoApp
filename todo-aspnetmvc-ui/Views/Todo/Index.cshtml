@@ -5,30 +5,35 @@
 }
 
 <h1>To do lists</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<div class="btn-group" role="group">
+    <a asp-action="Create" class="btn btn-success btn-sm">Create New List</a>
+</div>
+<div class="btn-group" role="group">
+    <a asp-action="Show" class="btn btn-success btn-sm">Show hidden lists</a>
+</div>
+<table class="table table-hover" aria-describedby="head table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                Title
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                Description
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsHidden)
+                Items
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
+    @if (!item.IsHidden)
+    {
         <tr>
             <td>
-                <a asp-controller="Item" asp-action="Index">
+                <a asp-controller="Item" asp-action="Index" asp-route-listId="@item.Id">
                     @Html.DisplayFor(modelItem => item.Title)
                 </a>
             </td>
@@ -36,14 +41,25 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsHidden)
+                @item.Items.Count
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Details</a>
+                <a asp-action="Copy" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Copy</a>
+                <a asp-action="Hide" asp-route-id="@item.Id" class="btn btn-secondary btn-sm">Hide</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
+        @foreach (var todoItem in item.Items.Where(ti => ti.DueDate.HasValue && ti.DueDate.Value.Date == DateTime.Today))
+        {
+            <tr class="table table-sm">
+                <td class="table-warning"></td>
+                <td class="table-warning">Tasks due today:</td>
+                <td class="table-warning">@Html.DisplayFor(modelItem => todoItem.Title)</td>
+            </tr>
+        }
+    }
 }
     </tbody>
 </table>

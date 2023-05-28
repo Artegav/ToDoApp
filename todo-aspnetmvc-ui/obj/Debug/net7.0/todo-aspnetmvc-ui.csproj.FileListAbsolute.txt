@@ -307,3 +307,4 @@
 /Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/obj/Debug/net7.0/todo-aspnetmvc-ui.pdb
 /Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/obj/Debug/net7.0/todo-aspnetmvc-ui.genruntimeconfig.cache
 /Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/obj/Debug/net7.0/ref/todo-aspnetmvc-ui.dll
+/Users/artemiygavrilov/Projects/todo-application/todo-aspnetmvc-ui/bin/Debug/net7.0/BootstrapBlazor.dll

@@ -11,7 +11,7 @@ public class TodoList
 
     public string? Description { get; set; }
     
-    public bool? IsHidden { get; set; }
+    public bool IsHidden { get; set; }
 
     public List<TodoItem>? Items { get; set; }
 }

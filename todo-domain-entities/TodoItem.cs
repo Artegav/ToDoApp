@@ -13,20 +13,15 @@ public class TodoItem
     
     public State? Status { get; set; }
     
-    public bool? IsHidden { get; set; }
+    public bool IsCompleted { get; set; }
     
+    [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy HH:mm}")]
     public DateTime? CreationDate { get; set; }
     
+    [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy HH:mm}")]
     public DateTime? DueDate { get; set; }
 
     public int ToDoListId { get; set; }
 
     public TodoList? TodoList { get; set; }
-}
-
-public enum State
-{
-    NotStarted,
-    InProgress,
-    Completed
 }

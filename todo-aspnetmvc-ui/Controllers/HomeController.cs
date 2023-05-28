@@ -12,11 +12,6 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-    
-    public IActionResult Index()
-    {
-        return View();
-    }
 
     [Route("/Privacy")]
     public IActionResult Privacy()
