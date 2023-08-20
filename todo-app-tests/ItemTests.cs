@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Moq.EntityFrameworkCore;
 using todo_aspnetmvc_ui.Controllers;
 
 namespace todo_app_tests;
@@ -60,6 +61,27 @@ public class ItemTests
         // Assert
         result.ShouldNotBeNull();
         result.Model.ShouldBe(items);
+    }
+    
+    [Test]
+    public async Task GetItems_WithoutListId_ReturnsListWithAllItems()
+    {
+        // Arrange
+        var items = new List<TodoItem>
+        {
+            new() { Id = 1, Title = "Item 1" },
+            new() { Id = 2, Title = "Item 2" }
+        };
+        var mockContext = new Mock<TodoContext>();
+        mockContext.Setup(ctx => ctx.TodoItems).ReturnsDbSet(items);
+        var itemService = new ItemService(mockContext.Object);
+        
+        // Act
+        var result = await itemService.GetItems();
+
+        // Assert
+        result.ShouldNotBeNull();
+        result.ShouldBe(items);
     }
 
     [Test]

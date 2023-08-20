@@ -12,12 +12,12 @@ namespace todo_domain_entities.Data
         public TodoContext (DbContextOptions<TodoContext> options)
             : base(options)
         {
-            // Database.EnsureCreated();
+            Database.EnsureCreated();
         }
 
-        public DbSet<TodoList> TodoList { get; set; }
+        public virtual DbSet<TodoList> TodoList { get; set; }
 
-        public DbSet<TodoItem> TodoItems { get; set; }
+        public virtual DbSet<TodoItem> TodoItems { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

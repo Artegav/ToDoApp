@@ -25,6 +25,7 @@ public class ItemService : IItemService
     {
         return await _context.TodoItems.ToListAsync() ?? throw new InvalidOperationException("No items found.");
     }
+    
     public async Task AddItem(TodoItem item)
     {
         if (item == null)
@@ -54,7 +55,8 @@ public class ItemService : IItemService
             item.IsCompleted = false;
         
         _context.Update(item);
-        await _context.SaveChangesAsync();
+        await _context.SaveChangesAsync().ConfigureAwait(false);
+        
     }
     
     public async Task DeleteItem(int id)

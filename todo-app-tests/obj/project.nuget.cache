@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dor8H9NkoK0vztYZnX6buSCJ16kUjoVTmEF7FcXT6spYNjH86hIHDbMRzzLs0sErl3O6CC3RNgvCBipmCQTJ1A==",
+  "dgSpecHash": "19KpggbgEaJWMKw9mX4R3gwVd1t4HP+VR5I00i3n3Umy7doOCVFX79tCHPvkWF2Hcas0Ks0DdG3YCTxso95UTA==",
   "success": true,
   "projectFilePath": "/Users/artemiygavrilov/Projects/todo-application/todo-app-tests/todo-app-tests.csproj",
   "expectedPackageFiles": [
@@ -101,6 +101,7 @@
     "/Users/artemiygavrilov/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
     "/Users/artemiygavrilov/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "/Users/artemiygavrilov/.nuget/packages/moq/4.18.4/moq.4.18.4.nupkg.sha512",
+    "/Users/artemiygavrilov/.nuget/packages/moq.entityframeworkcore/7.0.0.2/moq.entityframeworkcore.7.0.0.2.nupkg.sha512",
     "/Users/artemiygavrilov/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
     "/Users/artemiygavrilov/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/artemiygavrilov/.nuget/packages/npgsql/7.0.4/npgsql.7.0.4.nupkg.sha512",
